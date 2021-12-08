@@ -6,6 +6,7 @@ app.get('/', (req, res) => {
   res.send('Server is ready');
 });
 
-app.listen(8000, () => {
-  console.log('server is running!')
+const port = process.env.PORT || 8000;
+app.listen(port, () => {
+  console.log(`server is running at localhost:${port}`)
 });
